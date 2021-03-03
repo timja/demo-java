@@ -51,6 +51,12 @@ public class Module2TestNGTest {
         driver.navigate().to("https://www.saucedemo.com");
         Assert.assertTrue(true);
 
+        try {
+            Thread.sleep(1000 * 60);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
     }
     /**

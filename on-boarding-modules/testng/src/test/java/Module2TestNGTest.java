@@ -58,6 +58,7 @@ public class Module2TestNGTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        driver.navigate().to("https://www.saucedemo.com");
 
 
     }

@@ -22,7 +22,7 @@ public class Module4TestNGTest {
     public void setupTestMethod() throws MalformedURLException {
         String sauceUserName = System.getenv("SAUCE_USERNAME");
         String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
-        String sauceURL = "https://ondemand.saucelabs.com/wd/hub";
+        String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
 
         /**
          * * Here we set the MutableCapabilities for "sauce:options", which is required for newer versions of Selenium

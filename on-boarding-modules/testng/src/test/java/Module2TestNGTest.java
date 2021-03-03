@@ -25,7 +25,7 @@ public class Module2TestNGTest {
 
         String sauceUserName = System.getenv("SAUCE_USERNAME");
         String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
-        String sauceURL = "https://ondemand.saucelabs.com/wd/hub";
+        String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
 
         /**
          * In this section, we will configure our test to run on some specific

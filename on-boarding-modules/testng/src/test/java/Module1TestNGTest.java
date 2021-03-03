@@ -60,7 +60,7 @@ public class Module1TestNGTest {
         /** If you're accessing the EU data center, use the following endpoint:.
          * https://ondemand.eu-central-1.saucelabs.com/wd/hub
          * */
-        driver = new RemoteWebDriver(new URL("http://ondemand.saucelabs.com:80/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub"), capabilities);
 
         //navigate to the url of the Sauce Labs Sample app
         driver.navigate().to("https://www.saucedemo.com");

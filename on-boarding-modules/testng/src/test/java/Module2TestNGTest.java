@@ -52,7 +52,9 @@ public class Module2TestNGTest {
         Assert.assertTrue(true);
 
         try {
+            System.out.println("Sleeping for 60  seconds");
             Thread.sleep(1000 * 60);
+            System.out.println("Finished sleeping");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

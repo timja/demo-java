@@ -64,7 +64,7 @@ public class Module2TestNGTest {
     }
 
     @Test
-    public void shouldOpenSafari() throws MalformedURLException {
+    public void failsInSafari() throws MalformedURLException {
         /** Here we set environment variables from your local machine, or IntelliJ run configuration,
          *  and store these values in the variables below. Doing this is a best practice in terms of test execution
          *  and security. If you're not sure how to use env variables, refer to this guide -

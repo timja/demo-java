@@ -51,13 +51,13 @@ public class Module2TestNGTest {
         driver.navigate().to("https://www.saucedemo.com");
         Assert.assertTrue(true);
 
-        try {
-            System.out.println("Sleeping for 60  seconds");
-            Thread.sleep(1000 * 60);
-            System.out.println("Finished sleeping");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            System.out.println("Sleeping for 60  seconds");
+//            Thread.sleep(1000 * 60);
+//            System.out.println("Finished sleeping");
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         driver.navigate().to("https://www.saucedemo.com");
 
 

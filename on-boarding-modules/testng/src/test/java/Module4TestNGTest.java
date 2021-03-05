@@ -82,6 +82,10 @@ public class Module4TestNGTest {
          * https://ondemand.eu-central-1.saucelabs.com/wd/hub
          * */
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
+
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        System.out.println(message);
     }
     @Test
     public void shouldOpenChrome() {

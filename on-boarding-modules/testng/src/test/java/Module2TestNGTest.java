@@ -50,7 +50,7 @@ public class Module2TestNGTest {
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
         System.out.println(message);
 
         driver.navigate().to("https://www.saucedemo.com");
@@ -103,7 +103,7 @@ public class Module2TestNGTest {
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
         System.out.println(message);
 
         driver.navigate().to("https://www.saucedemo.com");

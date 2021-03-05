@@ -37,7 +37,7 @@ public class Module3TestNGTest {
         capabilities.setCapability("browserName", "Chrome");
         capabilities.setCapability("platform", "Windows 10");
         capabilities.setCapability("version", "59.0");
-        capabilities.setCapability("build", "Onboarding Sample App - Java-TestNG");
+        sauceOpts.setCapability("build", System.getenv("SAUCE_BUILD_NAME"));
         capabilities.setCapability("name", "3-cross-browser");
 
         /** If you're accessing the EU data center, use the following endpoint:.
@@ -45,8 +45,7 @@ public class Module3TestNGTest {
          * */
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
     }
 

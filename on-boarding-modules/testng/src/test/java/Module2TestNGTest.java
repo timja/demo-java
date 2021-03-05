@@ -36,7 +36,7 @@ public class Module2TestNGTest {
         capabilities.setCapability("browserName", "Safari");
         capabilities.setCapability("platform", "macOS 10.13");
         capabilities.setCapability("version", "11.1");
-        capabilities.setCapability("build", "Onboarding Sample App - Java-TestNG");
+        capabilities.setCapability("build", System.getenv("SAUCE_BUILD_NAME"));
         capabilities.setCapability("name", "2-user-site");
 
         /**
@@ -49,8 +49,7 @@ public class Module2TestNGTest {
          * */
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
 
         driver.navigate().to("https://www.saucedemo.com");
@@ -89,7 +88,7 @@ public class Module2TestNGTest {
         capabilities.setCapability("browserName", "Safari");
         capabilities.setCapability("platform", "macOS 10.13");
         capabilities.setCapability("version", "11.1");
-        capabilities.setCapability("build", "Onboarding Sample App - Java-TestNG");
+        capabilities.setCapability("build", System.getenv("SAUCE_BUILD_NAME"));
         capabilities.setCapability("name", "2-user-site");
 
         /**
@@ -102,8 +101,7 @@ public class Module2TestNGTest {
          * */
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
 
         driver.navigate().to("https://www.saucedemo.com");

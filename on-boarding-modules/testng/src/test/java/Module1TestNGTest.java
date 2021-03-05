@@ -45,7 +45,7 @@ public class Module1TestNGTest {
         capabilities.setCapability("version", "11.1");
 
         //set the build name of the application
-        capabilities.setCapability("build", "Onboarding Sample App - Java-TestNG");
+        capabilities.setCapability("build", System.getenv("SAUCE_BUILD_NAME"));
 
         //set your test case name so that it shows up in Sauce Labs
         capabilities.setCapability("name", "1-first-test");
@@ -62,8 +62,7 @@ public class Module1TestNGTest {
          * */
         driver = new RemoteWebDriver(new URL("https://ondemand.eu-central-1.saucelabs.com/wd/hub"), capabilities);
 
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
 
         //navigate to the url of the Sauce Labs Sample app

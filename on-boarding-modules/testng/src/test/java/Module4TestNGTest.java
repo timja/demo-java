@@ -63,7 +63,7 @@ public class Module4TestNGTest {
          * successful test automation. Builds will gather all of your tests into a single
          * 'test suite' that you can analyze for results.
          * It's a best practice to always group your tests into builds. */
-        sauceOpts.setCapability("build", "Onboarding Sample App - Java-TestNG");
+        sauceOpts.setCapability("build", System.getenv("SAUCE_BUILD_NAME"));
 
 
         /** Required to set w3c protoccol **/
@@ -83,8 +83,7 @@ public class Module4TestNGTest {
          * */
         driver = new RemoteWebDriver(new URL(sauceURL), capabilities);
 
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-            (((RemoteWebDriver) driver).getSessionId()).toString(), System.getenv("JOB_NAME"));
+        String message = String.format("SauceOnDemandSessionID=%1$s", (((RemoteWebDriver) driver).getSessionId()).toString());
         System.out.println(message);
     }
     @Test

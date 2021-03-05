@@ -23,6 +23,10 @@ public class Module2TestNGTest {
          * https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Use+Environment+Variables+for+Authentication+Credentials
          * or check testng-README.md */
 
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+            (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+        System.out.println(message);
+
         String sauceUserName = System.getenv("SAUCE_USERNAME");
         String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
         String sauceURL = "https://ondemand.eu-central-1.saucelabs.com/wd/hub";
@@ -70,6 +74,10 @@ public class Module2TestNGTest {
          *  and security. If you're not sure how to use env variables, refer to this guide -
          * https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Use+Environment+Variables+for+Authentication+Credentials
          * or check testng-README.md */
+
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+            (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+        System.out.println(message);
 
         String sauceUserName = System.getenv("SAUCE_USERNAME");
         String sauceAccessKey = System.getenv("SAUCE_ACCESS_KEY");
